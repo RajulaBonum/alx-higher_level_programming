@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__=='__main__':
+if __name__ == '__main__':
     import sys
     name_script = sys.argv[0]
     argv = sys.argv[1:]
@@ -13,4 +13,3 @@ if __name__=='__main__':
         print("{} arguments:".format(len(argv)))
         for j in range(len(argv)):
             print("{}: {}".format(j+1, argv[j]))
-
