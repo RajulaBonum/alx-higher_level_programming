@@ -7,10 +7,10 @@ def delete_at(my_list=[], idx=0):
     while i < len(my_list):
         if i != idx:
             new.append(my_list[i])
-        i+= 1
+        i += 1
     my_list[:] = []
     i = 0
     while i < len(new):
         my_list.append(new[i])
-        i+= 1
+        i += 1
     return new
