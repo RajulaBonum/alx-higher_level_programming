@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Class square"""
+"""A class module with attributes"""
+
 
 class Square:
     """
-    Attributes : size of square
+    Class with private instance attributes
     """
     def __init__(self, size):
         """
-        Creates private attribute
+        Creates private instance attribute
+        Use of '__'
         """
         self.__size = size
