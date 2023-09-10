@@ -5,6 +5,12 @@
 class Rectangle:
     """Represent a rectangle."""
 
+    """public class attribute"""
+    number_of_instances = 0
+
+    """public class attribute print symbol"""
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
         Args:
@@ -13,6 +19,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -67,7 +74,7 @@ class Rectangle:
             return ("")
         for i in range(self.__height):
             for j in range(self.__width):
-                rect.append('#')
+                rect.append(Rectangle.print_symbol)
             if i != self.__height:
                 rect.append('\n')
         return ("".join(rect))
@@ -86,3 +93,4 @@ class Rectangle:
         deletes instance of Rectangle class, and prints "bye" message
         """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
