@@ -1,24 +1,14 @@
 #!/usr/bin/python3
 """Class Rectangle"""
 
+
 class Rectangle:
     """Attributes of the rectangle"""
-
-    def __init__(self, width=0, height=0):
-        """creates new instances"""
-
-        self.height = height
-        self.width = width
 
     @property
     def width(self):
         """returns widith"""
         return self.__width
-
-    @property
-    def height(self):
-        """returns height"""
-        return self.__height
 
     @width.setter
     def width(self, value):
@@ -30,6 +20,11 @@ class Rectangle:
         else:
             self.__width = value
 
+    @property
+    def height(self):
+        """Getter returns height"""
+        return self.__height
+
     @height.setter
     def height(self, value):
         """property settler"""
@@ -40,3 +35,8 @@ class Rectangle:
         else:
             self.__height = value
 
+    def __init__(self, width=0, height=0):
+        """creates new instances"""
+
+        self.height = height
+        self.width = width
