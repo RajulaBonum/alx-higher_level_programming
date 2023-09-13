@@ -4,13 +4,11 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """module search and update"""
-
+    text = ""
     with open(filename, 'r') as f:
-        lines = f.readlines()
-        i = 0
-        for line in lines:
-            if line.find(search_string) is not -1:
-                line.insert(i + 1, new_string)
-            i += 1
-        f.seek(0)
-        f.write("".join(lines))
+        for line in f:
+            text += line
+            if search_string in line:
+                text += new_string
+    with open(filename, 'w') as w:
+        w.write(text)
